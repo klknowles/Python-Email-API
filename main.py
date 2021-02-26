@@ -62,7 +62,7 @@ class EmailSearch(Resource):
             my_message.append(email_data)
         return my_message
 
-class EmailDeleteFrom(Resource, emailadd):
+class EmailDeleteFrom(Resource):
     def get(self, emailadd):
         mail = imaplib.IMAP4_SSL(imap_url)
         mail.login(user, passwd)
